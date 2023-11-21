@@ -37,7 +37,11 @@
 	<!-- header 
    ================================================== -->
    <header>   	
-   	<div class="row">
+   	<div class="row" style="width: 100%;
+	   margin: auto;
+	   max-width: 100%;
+	   background: #00000000;
+	   transition: background 0.3s ease" id="row-top-bar">
 
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
@@ -75,7 +79,7 @@
 	   			<h1>Lucas Anastácio.</h1>
 
 	   			<p class="intro-position">
-	   				<span>Desenvolvedor Android</span>
+	   				<span>Desenvolvedor Front-end</span>
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" href="#about" title="">Mais sobre mim.</a>
@@ -86,8 +90,8 @@
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-         <li><a href="linkedin.com/in/lucas-anastacio/"><i class="fa fa-linkedin"></i></a></li>
-         <li><a href="https://github.com/lucasar2303"><i class="fa fa-github"></i></a></li>
+         <li><a href="https://www.linkedin.com/in/lucas-anastacio/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://github.com/lucasar2303" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
@@ -105,9 +109,9 @@
 
    			<div class="intro-info">
 
-   				<img src="images/profile-photo.jpg" alt="Profile Picture">
+   				<img src="images/profile-pic.png" alt="Profile Picture">
 
-   				<p class="lead">Me chamo Lucas, tenho 21 anos, estou no ultimo semestre do curso de Análise e Desenvolvimento de Sistemas pela FATEC. Apaixonado por tecnologia, estudo e desenvolvo aplicativos Android principalmente na linguagem Kotlin.</p>
+   				<p class="lead">Me chamo Lucas, tenho 22 anos e sou um entusiasta da tecnologia e desenvolvimento Front-end. Formado em Análise e Desenvolvimento de Sistemas, minha paixão por desenvolvimento Front-end é alimentada pela constante busca de soluções inovadoras e eficientes.</p>
    			</div>   			
 
    		</div>   		
@@ -119,7 +123,7 @@
 
    			<h3>Perfil</h3>
    			<p>
-				Um desenvolvedor Android motivado, possuo boa capacidade de aprendizado, trabalho bem em equipe e excelente capacidade de resolução de problemas. Sou organizado, com um bom gerenciamento de tempo e estou sempre buscando novos conhecimentos para evoluir na área.</p>
+				Como desenvolvedor, destaco-me pela boa capacidade de aprendizado e eficiência no trabalho em equipe, além de possuir uma excelente habilidade na resolução de problemas. Organizado e com uma gestão de tempo eficaz, estou constantemente em busca de novos conhecimentos para evoluir profissionalmente no campo do desenvolvimento Front-end.</p>
 
    			<ul class="info-list">
    				<li>
@@ -132,7 +136,7 @@
    				</li>
    				<li>
    					<strong>Job:</strong>
-   					<span>Freelancer, Dev WEB, Dev Android</span>
+   					<span>Desenvolvedor Front-end</span>
    				</li>
 
    				<li>
@@ -152,23 +156,21 @@
    		<div class="col-six tab-full">
 
    			<h3>Skills</h3>
-   			<p>Na área de desenvolvimento android nativo, utilizo Java, Kotlin e XML. Além de integração com API's, Firebase e Arquiteturas como MVVM.</p>
-   			<p>No desenvolvimento WEB, tenho experiência com HTML, CSS, Javascript e Wordpress. </p>
-			<p>Hábil com Git, Scrum e outras metodologias ágeis de desenvolvimento de software.</p>
+			<p>Especializando-me em <strong>React</strong>, possuo sólido conhecimento em <strong>JavaScript, HTML e CSS.</strong> Minha experiência em design <strong>UI/UX</strong> complementa minhas habilidades técnicas. Sou hábil com <strong>Git</strong> e metodologias ágeis como <strong>Scrum</strong>, fundamentais para um desenvolvimento eficiente.</p>
 
 
 				<ul class="skill-bars">
 				   <li>
-				   	<strong>Java Android</strong>
-				   </li>
-				   <li>
-				   	<strong>Kotlin</strong>
+				   	<strong>React</strong>
 				   </li>
 				   <li>
 				   	<strong>Javascript</strong>
 				   </li>
 				   <li>
 				   	<strong>HTML + CSS</strong>
+				   </li>
+				   <li>
+				   	<strong>Kotlin + Java</strong>
 				   </li>
       
 				</ul> <!-- /skill-bars -->		
@@ -215,6 +217,24 @@
 
    			<div class="timeline-wrap">
 
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-briefcase"></i>
+					</div>
+
+					<div class="timeline-header">
+						<h3>Desenvolvedor Front-end</h3>
+						<p>Jun 2023 - Presente</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>Foursys</h4>
+						<p>Como Desenvolvedor Front-End, especializei-me em criar interfaces de usuário interativas e eficientes, colaborando ativamente com equipes de design e back-end. Minha experiência abrange desde o desenvolvimento de funcionalidades inovadoras até a otimização de aplicativos, utilizando habilidades avançadas em JavaScript, HTML, CSS, Ruby on Rails e Git.</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
    				<div class="timeline-block">
 
 	   				<div class="timeline-ico">
@@ -223,7 +243,7 @@
 
 	   				<div class="timeline-header">
 	   					<h3>Estágio Android</h3>
-	   					<p>Abr 2022 - Presente</p>
+	   					<p>Abr 2022 - Jun 2023</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -278,7 +298,7 @@
 
 	   				<div class="timeline-header">
 	   					<h3>Análise e Desenvolvimento de Sistemas</h3>
-	   					<p>Jul 2020 - Present</p>
+	   					<p>Jul 2020 - Jul 2023</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -375,6 +395,8 @@
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
 
+				
+
 	         	<div class="bgrid folio-item">
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/liberty.jpg" alt="Liberty">
@@ -391,6 +413,8 @@
 	               </div>	               
 	        		</div> <!-- /folio-item -->
 
+					
+
 	        		<div class="bgrid folio-item">
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/shutterbug.jpg" alt="Shutterbug">
@@ -406,6 +430,22 @@
 	                  </a>
 	               </div>
 	        		</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/todolist.jpg" alt="Liberty">
+						   <a href="#modal-07" class="overlay">	                  	           
+							  <div class="folio-item-table">
+								  <div class="folio-item-cell">
+											 <h3 class="folio-title">Todo-List</h3>	     					    
+											   <span class="folio-types">
+												   Desenvolvimento WEB - React
+											 </span>
+										 </div>	                      	
+							  </div>                    
+						   </a>
+						</div>	               
+						 </div> <!-- /folio-item -->
 
 	            <div class="bgrid folio-item">
 	               <div class="item-wrap">
@@ -473,6 +513,28 @@
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
+
+				<div id="modal-07" class="popup-modal slider mfp-hide">	
+
+					<div class="media">
+						<img src="images/portfolio/modals/m-todolist.jpg" alt="" />
+					</div>      	
+
+				  <div class="description-box">
+					 <h4>Todo-List</h4>		      
+					 <p>Como um projeto de aprendizado focado em React, esta aplicação é uma ferramenta ágil para gerenciamento de tarefas. Ele permite adicionar, editar, e marcar tarefas como concluídas, com a funcionalidade adicional de remoção e salvamento dos dados via LocalStorage.</p>
+
+					 <div class="categories">Desenvolvimento web - react</div>			               
+				  </div>
+
+				<div class="link-box">
+				   <a href="https://todo-list-react-khaki.vercel.app"  target="_blank" >Detalhes</a>
+					 <a href="#" class="popup-modal-dismiss">Fechar</a>
+				</div>		      
+
+			  </div> <!-- /modal-01 -->
+
+
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
@@ -684,8 +746,7 @@
 
    			<h5>Envie um email</h5>
 
-   			<p>lucas-ar13@hotmail.com			     
-			   </p>
+   			<p id="email-copy" style="cursor: pointer;">lucas-ar13@hotmail.com</p>
 
    		</div>
 
@@ -695,10 +756,9 @@
    				<i class="icon-phone"></i>
    			</div>
 
-   			<h5>Me ligue</h5>
+   			<h5>Whatsapp</h5>
 
-   			<p>Whats: (12) 99202-9139
-			   </p>
+   			<p id="number-copy" style="cursor: pointer;">(12) 99202-9139</p>
 
    		</div>
    		
@@ -716,8 +776,8 @@
      		<div class="col-six tab-full pull-right social">
 
      			<ul class="footer-social">        
-					<li><a href="linkedin.com/in/lucas-anastacio/"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://github.com/lucasar2303"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/lucas-anastacio/" target="_blank" ><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://github.com/lucasar2303" target="_blank"><i class="fa fa-github"></i></a></li>
 			   </ul> 
 	      		
 	      </div>

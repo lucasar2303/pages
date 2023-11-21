@@ -121,9 +121,9 @@
    $('.item-wrap a').magnificPopup({
 
       type:'inline',
-      fixedContentPos: false,
+      fixedContentPos: true,
       removalDelay: 300,
-      showCloseBtn: false,
+      showCloseBtn: true,
       mainClass: 'mfp-fade'
 
    });
@@ -139,15 +139,25 @@
    ------------------------------------------------------ */  
    var toggleButton = $('.menu-toggle'),
        nav = $('.main-navigation');
+	   var menuElement = document.getElementById('row-top-bar');
 
    // toggle button
    toggleButton.on('click', function(e) {
+    e.preventDefault();
 
-		e.preventDefault();
-		toggleButton.toggleClass('is-clicked');
-		nav.slideToggle();
+    toggleButton.toggleClass('is-clicked');
+    
+    if (toggleButton.hasClass('is-clicked')) {
+        menuElement.style.transition = 'background 0.3s ease'; // Tempo de transição para 0.3 segundos
+        menuElement.style.background = '#000'; // Cor de fundo #000
+    } else {
+        menuElement.style.transition = 'background 1s ease'; // Tempo de transição para 1 segundo
+        menuElement.style.background = '#00000000'; // Cor de fundo #00000000
+    }
 
-	});
+    nav.slideToggle();
+});
+
 
    // nav items
   	nav.find('li a').on("click", function() {   
@@ -155,9 +165,36 @@
    	// update the toggle button 		
    	toggleButton.toggleClass('is-clicked'); 
    	// fadeout the navigation panel
-   	nav.fadeOut();   		
+   	nav.fadeOut();   
+	menuElement.style.background = '#00000000';		
    	     
   	});
+
+	/*-----------------------------------------------------*/
+  	/* Scroll Fade Menu
+   ------------------------------------------------------ */  
+
+   window.addEventListener('scroll', function() {
+	// Verifica se o dispositivo é grande (não um celular)
+	if (window.innerWidth > 768) {
+	  var menuElement = document.getElementById('row-top-bar');
+	  var heightToChange = window.innerHeight - 300; // 100vh ajustado
+  
+	  if (window.scrollY > heightToChange) {
+		menuElement.style.background = '#000'; // Cor após rolar 100vh
+	  } else {
+		menuElement.style.background = '#00000000'; // Cor original
+	  }
+	}
+  });
+  
+  // Define a cor de fundo para #000 em dispositivos menores (celulares) sem esperar pelo evento de rolagem
+  if (window.innerWidth <= 768) {
+	var menuElement = document.getElementById('row-top-bar');
+	menuElement.style.background = '#000';
+  }
+  
+  
 
 
    /*---------------------------------------------------- */
@@ -236,5 +273,38 @@
 		}		
 
 	});		
+
+
+	/*----------------------------------------------------- */
+  	/* Copy email and phone-number
+   ------------------------------------------------------- */ 
+
+   function copyToClipboard(elementId) {
+    // Cria um campo de texto temporário
+    var textField = document.createElement('textarea');
+    textField.innerText = document.getElementById(elementId).innerText;
+    document.body.appendChild(textField);
+
+    // Seleciona o texto dentro do campo de texto
+    textField.select();
+    textField.setSelectionRange(0, 99999); // Para compatibilidade com dispositivos móveis
+
+    // Copia o texto selecionado
+    document.execCommand('copy');
+
+    // Remove o campo de texto temporário
+    document.body.removeChild(textField);
+
+    // Opcional: feedback para o usuário
+    alert('Texto copiado: ' + textField.innerText);
+  }
+
+  document.getElementById('email-copy').addEventListener('click', function() {
+    copyToClipboard('email-copy');
+  });
+
+  document.getElementById('number-copy').addEventListener('click', function() {
+    copyToClipboard('number-copy');
+  });
 
 })(jQuery);
